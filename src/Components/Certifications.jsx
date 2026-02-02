@@ -4,6 +4,12 @@ const Certifications = () => {
 
     const certifications = [
         {
+            title: "Full Stack Course",
+            org: "GeeksForGeeks",
+            duration: "2026",
+            description: "Learned HTML, CSS, JavaScript, React, NodeJS, ExpressJS, MongoDB/Mongoose and modern web development practices."
+        },
+        {
             title: "Java Full Stack Development",
             org: "Jspiders, Hyderabad",
             duration: "2024 - 2025",
@@ -11,8 +17,8 @@ const Certifications = () => {
         },
         {
             title: "Java Course",
-            org: "GeeksforGeeks",
-            duration: "",
+            org: "GeeksForGeeks",
+            duration: "2025",
             description: "Strong foundation in Core Java concepts with practical coding experience."
         },
         {
@@ -27,6 +33,7 @@ const Certifications = () => {
             duration: "2022",
             description: "Learned HTML, CSS, JavaScript, and modern web development practices."
         }
+        
     ]
 
 

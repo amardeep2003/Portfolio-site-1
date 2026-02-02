@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import ProfilePic from '../assets/Amardeep photo.jpg'
 import { FaJava, FaReact, FaHtml5, FaCss3Alt, FaGitAlt } from "react-icons/fa";
 import { SiJavascript, SiMysql, SiTailwindcss, SiSpringboot } from "react-icons/si";
+import { SiMongodb, SiExpress, SiNodedotjs } from "react-icons/si";
+import { FaBars, FaTimes } from "react-icons/fa";
 import Projects from './Projects';
 import Certifications from './Certifications';
 import { MdEmail, MdPhone } from "react-icons/md";
@@ -13,8 +15,13 @@ import Contact from './Contact';
 export default function Portfolio() {
 
   const [activeSection, setActiveSection] = useState("home");
+  const [menuOpen, setMenuOpen] = useState(false);
+
 
   const skills = [
+    { name: "NodeJS", icon: <SiNodedotjs className="text-green-400" /> },
+    { name: "ExpressJS", icon: <SiExpress className="text-gray-300" /> },
+    { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
     { name: "Java", icon: <FaJava className="text-orange-500" /> },
     { name: "React", icon: <FaReact className="text-cyan-400" /> },
     { name: "Javascript", icon: <SiJavascript className="text-yellow-400" /> },
@@ -55,27 +62,60 @@ export default function Portfolio() {
     <div className="min-h-screen bg-gradient-to-black from-slate-950 via-blue-950 to-slate-950 text-white font-sans">
       {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full backdrop-blur bg-black/40 z-50">
-        <div className="max-w-7xl mx-auto flex justify-between items-center gap-10 px-0 py-4">
-          <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-200 to-cyan-400">Amardeep</h1>
-          {/* <div className="space-x-10 text-lg">
-            <a href="#home" className="inline-block hover:text-blue-300 hover:scale-110 transition-transform duration-400">Home</a>
-            <a href="#about" className="inline-block hover:text-blue-300 hover:scale-110 transition-transform duration-400">About</a>
-            <a href="#skills" className="inline-block hover:text-blue-300 hover:scale-110 transition-transform duration-400">Skills</a>
-            <a href="#projects" className="inline-block hover:text-blue-300 hover:scale-110 transition-transform duration-400">Projects</a>
-            <a href="#contact" className="inline-block hover:text-blue-300 hover:scale-110 transition-transform duration-400">Contact</a>
-          </div> */}
+  <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-          <div className="space-x-10 text-lg">
-            {
-              ['home', 'about', 'skills', 'projects', 'certifications', 'contact'].map((section) => (
-                <a key={section} href={`#${section}`} className={`inline-block font-bold text-2xl hover:text-blue-300 hover:scale-110 transition-transform duration-400 ${activeSection === section ? 'border-b-2 border-blue-300' : ''}`}>
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
-                </a>
-              ))
-            }
-          </div>
-        </div>
-      </nav>
+    {/* Logo */}
+    <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-blue-200 to-cyan-400">
+      Amardeep
+    </h1>
+
+    {/* Desktop Menu */}
+    <div className="hidden md:flex space-x-10 text-lg">
+      {
+        ['home', 'about', 'skills', 'projects', 'certifications', 'contact'].map((section) => (
+          <a
+            key={section}
+            href={`#${section}`}
+            className={`font-bold text-xl hover:text-blue-300 transition ${
+              activeSection === section ? 'border-b-2 border-blue-300' : ''
+            }`}
+          >
+            {section.charAt(0).toUpperCase() + section.slice(1)}
+          </a>
+        ))
+      }
+    </div>
+
+    {/* Hamburger Button (Mobile) */}
+    <div className="md:hidden text-3xl cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
+      {menuOpen ? <FaTimes /> : <FaBars />}
+    </div>
+
+  </div>
+
+  {/* Mobile Menu */}
+  {
+    menuOpen && (
+      <div className="md:hidden bg-black/90 px-6 py-6 space-y-6 text-center">
+        {
+          ['home', 'about', 'skills', 'projects', 'certifications', 'contact'].map((section) => (
+            <a
+              key={section}
+              href={`#${section}`}
+              onClick={() => setMenuOpen(false)}
+              className={`block text-2xl font-semibold hover:text-blue-300 ${
+                activeSection === section ? 'text-blue-400' : ''
+              }`}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          ))
+        }
+      </div>
+    )
+  }
+</nav>
+
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center justify-center">
@@ -114,7 +154,7 @@ export default function Portfolio() {
         <p className="text-white leading-relaxed text-lg mb-5">
           As a fresher, I am eager to learn, grow, and contribute to real-world projects while continuously improving my technical and problem-solving skills.
         </p>
-        <a href="https://drive.google.com/file/d/1e7tyqLzKZMuhSSOSv4udIcv70h9CAPtN/view?usp=drive_link" target="_blank" rel="noopener norefferer"
+        <a href="https://drive.google.com/file/d/1LX45h0XwwRnlvE97LBNO_WpSeQcgRhk3/view?usp=drive_link" target="_blank" rel="noopener norefferer"
           className="inline-block px-10 py-3 rounded-lg
         bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-500
         text-white text-xl font-semibold shadow-lg shadow-blue-600/30 
