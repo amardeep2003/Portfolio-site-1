@@ -48,7 +48,7 @@ const Contact = () => {
 
         {/* Main Content: Left Cards + Right Form */}
         <div className="flex flex-col md:flex-row gap-8">
-          
+
           {/* Left Side: Contact Cards */}
           <div className="md:w-1/2 flex flex-col gap-9 items-center md:items-center ">
             {contacts.map((contact) => (
@@ -82,12 +82,14 @@ const Contact = () => {
                 Send Me a Message
               </h4>
 
-              <form className="space-y-6">
+              <form className="space-y-6" action="https://formsubmit.co/kamardeep418@gmail.com" method="POST">
                 {/* Name */}
                 <div>
                   <label className="block text-blue-200 mb-2">Your Name</label>
                   <input
                     type="text"
+                    name="name"
+                    required
                     placeholder="Enter your name"
                     className="w-full px-4 py-3 rounded-lg bg-slate-800 text-blue-100 border border-slate-700 focus:outline-none focus:border-blue-500"
                   />
@@ -98,6 +100,8 @@ const Contact = () => {
                   <label className="block text-blue-200 mb-2">Your Email</label>
                   <input
                     type="email"
+                    name="email"
+                    required
                     placeholder="Enter your email"
                     className="w-full px-4 py-3 rounded-lg bg-slate-800 text-blue-100 border border-slate-700 focus:outline-none focus:border-blue-500"
                   />
@@ -108,6 +112,8 @@ const Contact = () => {
                   <label className="block text-blue-200 mb-2">Message</label>
                   <textarea
                     rows="4"
+                    name="message"
+                    required
                     placeholder="Write your message..."
                     className="w-full px-4 py-3 rounded-lg bg-slate-800 text-blue-100 border border-slate-700 focus:outline-none focus:border-blue-500"
                   ></textarea>
@@ -122,6 +128,10 @@ const Contact = () => {
                 >
                   Send Message 🚀
                 </button>
+
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+
               </form>
             </div>
           </div>
