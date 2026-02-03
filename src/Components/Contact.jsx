@@ -131,6 +131,8 @@ const Contact = () => {
 
                 <input type="hidden" name="_captcha" value="false" />
                 <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_subject" value="New Portfolio Contact Message"/>
+
 
               </form>
             </div>
