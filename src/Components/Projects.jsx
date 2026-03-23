@@ -6,6 +6,16 @@ const Projects = () => {
 
     const projects = [
         {
+            name: "Job Portal Site",
+            tech: "ReactJS, NodeJs, ExpressJs, MongoDB, Tailwind",
+            points: [
+                "Built a full-stack job portal using MongoDB, Express, React, and Node.js.",
+                "Implemented JWT authentication with separate dashboards for job seekers and employers.",
+                "Added features to post jobs, apply for jobs, manage applications, and upload resumes.",
+                "Designed an interactive UI with animated buttons, cards, and SVG elements for a better user experience."
+            ]
+        },
+        {
             name: "Multi-Tenant Blog System",
             tech: "Node.js, Express.js, MongoDB, ReactJS, JWT",
             points: [
@@ -44,17 +54,8 @@ const Projects = () => {
                 "Built a responsive UI with Bootstrap 5, optimized for both desktop and mobile devices, improving user experience and reducing manual billing efforts.",
                 "Full stack project with clean UI, backend logic and database integration."
             ]
-        },
-        {
-            name: "Bookstore Management",
-            tech: "Java, Spring Boot, ReactJS, MySQL",
-            points: [
-                "Designed and implemented REST APIs for book inventory & user management.",
-                "Integrated React frontend with backend APIs for CRUD operations.",
-                "Built responsive UI using Tailwind CSS.",
-                "Full stack project with clean UI, backend logic and database integration."
-            ]
         }
+        
     ]
 
     function handleToggle(index) {
