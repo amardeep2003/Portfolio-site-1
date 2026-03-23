@@ -46,7 +46,7 @@ const Projects = () => {
             ]
         },
         {
-            name: "Bookstore Management System",
+            name: "Bookstore Management",
             tech: "Java, Spring Boot, ReactJS, MySQL",
             points: [
                 "Designed and implemented REST APIs for book inventory & user management.",
