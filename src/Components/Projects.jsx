@@ -5,6 +5,18 @@ const Projects = () => {
     const [selectedProject, setSelectedProject] = useState(null);
 
     const projects = [
+         {
+            name: "Ai Chat Application { Hey Jadoo }",
+            tech: "ReactJS, NodeJs, ExpressJs, CSS, Groq-sdk",
+            points: [
+                "Built a full-stack AI chat application using React and Node.js with custom personality-based responses.",
+                "Integrated Groq API to generate fast, context-aware conversational replies.",
+                "Implemented real-time chat UI with typing animation and message handling.",
+                "Deployment frontend on Netlify and backend on Render, resolving CORS and API integration issues.",
+                "GitHub Link :- https://github.com/amardeep2003/Hey-Jadoo-Ai-Chat-Assistant",
+                "Live Project Link :- https://hey-jadoo-ai-chat-assistant.netlify.app"
+            ]
+        },
         {
             name: "Job Portal Site",
             tech: "ReactJS, NodeJs, ExpressJs, MongoDB, Tailwind",
