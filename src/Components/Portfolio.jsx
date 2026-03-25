@@ -154,7 +154,7 @@ export default function Portfolio() {
         <p className="text-white leading-relaxed text-lg mb-5">
           As a fresher, I am eager to learn, grow, and contribute to real-world projects while continuously improving my technical and problem-solving skills.
         </p>
-        <a href="https://drive.google.com/file/d/1LX45h0XwwRnlvE97LBNO_WpSeQcgRhk3/view?usp=drive_link" target="_blank" rel="noopener norefferer"
+        <a href="https://drive.google.com/file/d/1_sBLfIdgcZPahL65TN05rXC5xvcXjyEw/view?usp=drive_link" target="_blank" rel="noopener norefferer"
           className="inline-block px-10 py-3 rounded-lg
         bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-500
         text-white text-xl font-semibold shadow-lg shadow-blue-600/30 
